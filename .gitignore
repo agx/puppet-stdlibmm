@@ -1,0 +1,6 @@
+pkg/
+coverage/
+spec/fixtures/
+Gemfile.lock
+.bundle/
+vendor/

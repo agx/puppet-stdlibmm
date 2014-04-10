@@ -1,0 +1,22 @@
+rvm:
+  - 1.8.7
+  - 1.9.3
+  - 2.0.0
+notifications:
+  email:
+    - agx@sigxcpu.org
+env:
+  - PUPPET_VERSION=2.7.23
+  - PUPPET_VERSION=3.0.2
+  - PUPPET_VERSION=3.1.1
+  - PUPPET_VERSION=3.2.4
+  - PUPPET_VERSION=3.3.2
+  - PUPPET_VERSION=3.4.1
+matrix:
+  exclude:
+    - rvm: 2.0.0
+      env: PUPPET_VERSION=2.7.23
+    - rvm: 2.0.0
+      env: PUPPET_VERSION=3.0.2
+    - rvm: 2.0.0
+      env: PUPPET_VERSION=3.1.1

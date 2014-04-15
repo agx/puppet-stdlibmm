@@ -1,7 +1,9 @@
 # Standard Library-- #
 
-This puppet module provides some (in fact currently only one) function on top
-of the standard library. It's called "stdlib minus minus".
+[![Build Status](https://travis-ci.org/agx/puppet-stdlibmm.png?branch=master)](https://travis-ci.org/agx/puppet-stdlibmm)
+
+This puppet module provides some function on top of the standard library. It's
+called "stdlib minus minus".
 
 # Functions #
 

@@ -25,6 +25,23 @@ The following values will fail, causing compilation to abort:
     $undefined = undef
     validate_nonemptystring($undefined)
 
+validate_nonemptystring_msg
+---------------------------
+Validate that the passed value is string data and not empty i.e. not
+undef or ''. Abort catalog compilation if it fails this check and
+print the message given as second argment.
+
+The following values will pass:
+
+    $my_string = "one two"
+    validate_nonemptystring_msg($my_string, 'Not a string')
+
+The following values will fail, causing compilation to abort and print
+'Not a string':
+
+    validate_nonemptystring_msg(true. 'Not a string')
+    validate_nonemptystring_msg([ 'some', 'array' ], 'Not a string')
+
 validate_nonemptyarray
 ----------------------
 Validate that all passed values are array data structures. Abort
@@ -43,4 +60,3 @@ The following values will fail, causing compilation to abort:
     validate_nonemptyarray('some_string')
     $undefined = undef
     validate_nonemptyarray($undefined)
-

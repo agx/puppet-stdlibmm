@@ -86,3 +86,38 @@ The following values will fail, causing compilation to abort with the given msg:
 
     validate_nonemptyarray_msg(true, 'Not a nonempty array')
     validate_nonemptyarray_msg([], 'Not a nonempty array')
+
+validate_nonemptyhash
+---------------------
+Validate that all passed values are hash data structures. Abort catalog
+compilation if any value fails this check. Also abort if any of the hashes
+is empty.
+
+The following values will pass:
+
+    $my_hash = { 'one' => 'two' }
+    validate_nonemptyhash($my_array)
+
+The following values will fail, causing compilation to abort:
+
+    validate_nonemptyhash(true)
+    validate_nonemptyhash([])
+    validate_nonemptyhash('some_string')
+    $undefined = undef
+    validate_nonemptyhash($undefined)
+
+validate_nonemptyhash_msg
+-------------------------
+Validate that the passed value is an hash data structure. Abort catalog
+compilation if any value fails this check. Also abort if any of the hashs
+is empty. On failure it prints the message given as the second argument.
+
+The following values will pass:
+
+    $my_hash = { 'one', 'two' }
+    validate_nonemptyhash_msg($my_hash, 'foo')
+
+The following values will fail, causing compilation to abort with the given msg:
+
+    validate_nonemptyhash_msg(true, 'Not a nonempty hash')
+    validate_nonemptyhash_msg([], 'Not a nonempty hash')

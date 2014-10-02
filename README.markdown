@@ -7,6 +7,16 @@ called "stdlib minus minus".
 
 # Functions #
 
+parse_url
+---------
+Parse an URL into its parts returning a hash.
+
+    parse_url('http://example.com:8080/foo')
+
+would result in
+
+    {'host' => 'example.com', 'path' => '/foo', 'port': 8080, 'scheme': 'http' }
+
 validate_nonemptystring
 -----------------------
 Validate that all passed values are strings with a length greater 0

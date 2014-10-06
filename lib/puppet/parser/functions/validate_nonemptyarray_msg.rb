@@ -18,7 +18,7 @@ module Puppet::Parser::Functions
     ENDHEREDOC
 
     unless args.length == 2 then
-      raise Puppet::ParseError, ("validate_nonemptyarray(): wrong number of arguments (#{args.length}; must be > 0)")
+      raise Puppet::ParseError, ("validate_nonemptyarray_msg(): wrong number of arguments (#{args.length}; must be == 2)")
     end
 
     arg = args[0]
